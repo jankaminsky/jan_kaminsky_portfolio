@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 100vh;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 250px;
+    height: 150px;
+    background-image: url('/images/jan_kaminsky_logo_gif.gif');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.subheading {
+    font-size: 16px;
+    padding: 0px 12px 0px 12px;
+}
+
+.body_text {
+    padding-top: 12px;
+    font-size: 12px;
+}
