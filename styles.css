@@ -57,7 +57,7 @@ a:hover {
 .logo {
     width: 250px;
     height: 150px;
-    background-image: url('/images/jan_kaminsky_logo_gif_alpha.gif');
+    background-image: url('/images/jan_kaminsky_logo_gif_alpha_100ms.gif');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
