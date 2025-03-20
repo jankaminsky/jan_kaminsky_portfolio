@@ -29,12 +29,19 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    height: 100vh;
+}
+
+.top {
+    height: 90vh;
+}
+
+.bottom {
+    height: 10vh;
+    flex-direction: row;
+    padding: 0px 24px 0px 24px;
 }
 
 .item {
-    width: 100%;
     text-align: center;
 }
 
@@ -49,10 +56,19 @@ a:hover {
 
 .subheading {
     font-size: 16px;
-    padding: 0px 12px 0px 12px;
+    padding: 0px 24px 0px 24px;
 }
 
 .body_text {
     padding-top: 12px;
     font-size: 12px;
+}
+
+.footer_text {
+    font-size: 10px;
+    color: darkgrey;
+}
+
+.footer_text a {
+    color: darkgray;
 }
