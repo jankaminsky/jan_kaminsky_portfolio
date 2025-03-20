@@ -37,15 +37,14 @@ a:hover {
     position: absolute;
     top: 0;
     z-index: 0;
-    height: 100vh;
 }
 
 .top {
-    height: 85vh;
+    height: 90dvh;
 }
 
 .bottom {
-    height: 15vh;
+    height: 10dvh;
     flex-direction: row;
     padding: 0px 24px 0px 24px;
     background-color: black;
