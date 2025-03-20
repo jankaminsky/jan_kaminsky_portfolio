@@ -25,20 +25,29 @@ a:hover {
 }
 
 .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+}
+
+.spline-background {
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }
 
 .top {
-    height: 90vh;
+    height: 80vh;
 }
 
 .bottom {
-    height: 10vh;
+    height: 20vh;
     flex-direction: row;
     padding: 0px 24px 0px 24px;
+    background-color: black;
 }
 
 .item {
@@ -48,7 +57,7 @@ a:hover {
 .logo {
     width: 250px;
     height: 150px;
-    background-image: url('/images/jan_kaminsky_logo_gif.gif');
+    background-image: url('/images/jan_kaminsky_logo_gif_alpha.gif');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
