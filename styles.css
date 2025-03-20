@@ -40,11 +40,11 @@ a:hover {
 }
 
 .top {
-    height: 80vh;
+    height: 85vh;
 }
 
 .bottom {
-    height: 20vh;
+    height: 15vh;
     flex-direction: row;
     padding: 0px 24px 0px 24px;
     background-color: black;
