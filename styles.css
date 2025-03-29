@@ -138,13 +138,13 @@ section {
 }
 
 .spline-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 0;
 }
 
 .black-block {
-    position: absolute;
+    position: fixed;
     width: 180px;
     height: 75px;
     background-color: black;
