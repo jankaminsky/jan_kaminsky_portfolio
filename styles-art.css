@@ -48,7 +48,7 @@ a:hover {
     position: sticky;
     top: 0;
     background-color: #ebebeb;
-    z-index: 5;
+    z-index: 15;
 }
 
 .general-section {
