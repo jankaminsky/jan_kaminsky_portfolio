@@ -41,9 +41,13 @@ section {
 }
 
 /* ------- SECTIONS ------- */
-.general-section {
+.about-section {
     height: 100dvh;
     min-height: 800px;
+}
+
+.work-section {
+    height: 100dvh;
 }
 
 .navbar-section {
