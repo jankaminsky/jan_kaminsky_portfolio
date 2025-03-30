@@ -243,6 +243,20 @@ section {
     color: darkgray;
 }
 
+.glass-btn {
+    background-color: rgba(255,255,255,.25);
+    width: 200px;
+    padding: 12px 0;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.glass-btn:hover {
+    cursor: pointer;
+    background-color: rgba(255,255,255,.5);
+
+}
+
 /* ------- UTILITY ------- */
 .mw_380 {
     max-width: 380px;
