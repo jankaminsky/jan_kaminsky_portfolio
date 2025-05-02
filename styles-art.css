@@ -84,6 +84,7 @@ a:hover {
     max-height: 500px;
     position: relative;
     aspect-ratio: 1.0;
+    background-color: black;
 }
 
 .info-cta {
