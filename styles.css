@@ -61,7 +61,7 @@ section {
     top: 0;
     overflow: hidden;
     z-index: 30;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, .9);
 }
 
 .first-section {
@@ -101,33 +101,33 @@ section {
 }
 
 .navbar a {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
     width: 85px;
-  }
+}
 
 .nav_progressbar {
     width: 100%;
     max-width: 380px;
     height: 8px;
-    background-color: rgba(217,217,217,.5);
+    background-color: rgba(217, 217, 217, .5);
     border-radius: 4px;
     position: relative;
-  }
+}
 
-  .nav_progressbar:hover {
+.nav_progressbar:hover {
     cursor: pointer;
-  }
+}
 
-  .nav_progressdot:hover {
+.nav_progressdot:hover {
     cursor: ew-resize;
-  }
+}
 
 .nav_progressdot {
     width: 4px;
     height: 4px;
     margin: 2px;
     border-radius: 2px;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, .5);
     position: absolute;
     transition: transform 0.1s linear;
 }
@@ -249,7 +249,7 @@ section {
 }
 
 .glass-btn {
-    background-color: rgba(255,255,255,.25);
+    background-color: rgba(255, 255, 255, .25);
     width: 200px;
     padding: 12px 20px;
     border: 1px solid white;
@@ -259,7 +259,7 @@ section {
 
 .glass-btn:hover {
     cursor: pointer;
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255, 255, 255, .5);
 }
 
 /* ------- UTILITY ------- */
@@ -335,4 +335,68 @@ section {
         display: block;
         height: 80px;
     }
+}
+
+/* ------- LOADER ------- */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: opacity 0.6s ease-out;
+}
+
+.loader-overlay.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    padding: 0 24px;
+}
+
+.loader-title,
+.loader-counter {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.loader-image-container {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Window starts closed (clipped from bottom) */
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loader-image.reveal {
+    /* Window fully open */
+    clip-path: inset(0 0 0 0);
+}
+
+.loader-image.close {
+    /* Window closes from bottom up */
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }

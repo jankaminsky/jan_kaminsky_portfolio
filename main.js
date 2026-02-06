@@ -1,4 +1,69 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ===== LOADER =====
+    const artImages = [
+        'images/art/SWIRLS.jpg',
+        'images/art/TIGER_PAINTING_thumbnail.jpg',
+        'images/art/ENJOY_PAINTING_thumbnail.jpg',
+        'images/art/TORA_POSTER_thumbnail.png',
+        'images/art/ALLIWANTTODOISRELAX_thumbnail.jpg',
+        'images/art/UNDERTHEWEATHER_POSTER_thumbnail.jpg',
+        'images/art/UNDERTHEWEATHER2_POSTER.jpg'
+    ];
+
+    function initLoader() {
+        const loader = document.getElementById('loader');
+        const counter = loader.querySelector('.loader-counter');
+        const image = loader.querySelector('.loader-image');
+
+        let currentImageIndex = 0;
+        let progress = 0;
+
+        // Preload images
+        artImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Show first image and reveal window
+        image.src = artImages[0];
+        // Small delay to ensure image loads before reveal
+        setTimeout(() => {
+            image.classList.add('reveal');
+        }, 50);
+
+        // Cycle images rapidly (instant swap, no fade)
+        const imageInterval = setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % artImages.length;
+            image.src = artImages[currentImageIndex];
+        }, 200);
+
+        // Animate counter
+        const counterInterval = setInterval(() => {
+            progress += Math.random() * 8 + 2;
+            if (progress >= 100) {
+                progress = 100;
+                counter.textContent = '100';
+                clearInterval(counterInterval);
+                clearInterval(imageInterval);
+
+                // Close window, then fade out loader
+                image.classList.remove('reveal');
+                image.classList.add('close');
+                setTimeout(() => {
+                    loader.classList.add('fade-out');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 600);
+                }, 400);
+            } else {
+                counter.textContent = Math.floor(progress);
+            }
+        }, 80);
+    }
+
+    initLoader();
+
+    // ===== PROGRESS BAR =====
     const progressDot = document.querySelector(".nav_progressdot");
     const progressBar = document.querySelector(".nav_progressbar");
 
@@ -33,15 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize on load
     updateProgress();
-        
+
     progressBar.addEventListener("click", function (event) {
         const progressBarWidth = progressBar.clientWidth;
         const clickPosition = event.offsetX; // Position where the user clicked
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    
+
         // Calculate the scroll position based on the click
         const targetScroll = (clickPosition / progressBarWidth) * scrollHeight;
-    
+
         // Smoothly scroll to the calculated position
         window.scrollTo({
             top: targetScroll,
