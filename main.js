@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Show first image and reveal window
         image.src = artImages[0];
-        // Small delay to ensure image loads before reveal
+        // Delay before window opens
         setTimeout(() => {
             image.classList.add('reveal');
-        }, 50);
+        }, 250);
 
         // Cycle images rapidly (instant swap, no fade)
         const imageInterval = setInterval(() => {
