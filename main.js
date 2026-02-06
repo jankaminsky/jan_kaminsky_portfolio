@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'images/art/UNDERTHEWEATHER_POSTER_thumbnail.jpg',
         'images/art/UNDERTHEWEATHER2_POSTER.jpg',
         'images/art/DR_TOM_START_Cover_Art_FINAL.png',
-        'images/art/FAIS_DE_BEAUX_RÊVES.png',
+        'images/art/FAIS_DE_BEAUX_ReVES.png',
         'images/art/DR_TOM-MultiColor-Logo.png',
     ];
 
